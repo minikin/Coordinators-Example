@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AhO-gy-yWL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Healthy Food-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iAZ-ba-RtK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MDa-wl-Wsr">
+                                    <size key="itemSize" width="365" height="71"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HealthyFoodCell" id="KVS-VX-x53" customClass="HealthyFoodCell" customModule="iOS_Example" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="50" width="365" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CellLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-qx-Lnb">
+                                                    <rect key="frame" x="20" y="27" width="326" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="NbZ-qx-Lnb" firstAttribute="centerY" secondItem="KVS-VX-x53" secondAttribute="centerY" id="2Ll-TI-bc7"/>
+                                            <constraint firstItem="NbZ-qx-Lnb" firstAttribute="leading" secondItem="KVS-VX-x53" secondAttribute="leading" constant="20" id="7VF-kt-Uk7"/>
+                                            <constraint firstItem="NbZ-qx-Lnb" firstAttribute="centerX" secondItem="KVS-VX-x53" secondAttribute="centerX" id="fqW-PF-Hkh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="NbZ-qx-Lnb" id="RLE-8E-HfA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HealthyFoodHeader" id="4fx-kH-NuB" userLabel="Header" customClass="HealthyFoodHeader" customModule="iOS_Example" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeaderLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-Vw-Bpc">
+                                            <rect key="frame" x="20" y="15" width="335" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VaD-Vw-Bpc" firstAttribute="centerX" secondItem="4fx-kH-NuB" secondAttribute="centerX" id="GPk-ex-hOI"/>
+                                        <constraint firstItem="VaD-Vw-Bpc" firstAttribute="centerY" secondItem="4fx-kH-NuB" secondAttribute="centerY" id="LM9-IN-kvv"/>
+                                        <constraint firstItem="VaD-Vw-Bpc" firstAttribute="leading" secondItem="4fx-kH-NuB" secondAttribute="leading" constant="20" id="P0q-2S-GZI"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="VaD-Vw-Bpc" id="MnF-Cp-lgK"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iAZ-ba-RtK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4jr-b4-hEW"/>
+                            <constraint firstItem="iAZ-ba-RtK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HWO-cd-duK"/>
+                            <constraint firstItem="iAZ-ba-RtK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eM6-Ke-43c"/>
+                            <constraint firstItem="iAZ-ba-RtK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ju8-KV-zM5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Healthy Food" id="Giz-7X-dhn"/>
+                    <connections>
+                        <outlet property="mainCollectionView" destination="iAZ-ba-RtK" id="92Z-lG-vtP"/>
+                        <segue destination="T0o-s1-0BS" kind="show" identifier="toExample" id="SqV-1h-Tzj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="133"/>
+        </scene>
+        <!--Vitamins-->
+        <scene sceneID="Ccy-jl-ahq">
+            <objects>
+                <viewController id="T0o-s1-0BS" customClass="ExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dS4-oG-f2U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHK-1J-lYf">
+                                <rect key="frame" x="8" y="72" width="359" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B0v-Wc-tU6">
+                                    <size key="itemSize" width="320" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VitaminCell" id="Vvl-8Q-BQH" customClass="ViataminCell" customModule="iOS_Example" customModuleProvider="target">
+                                        <rect key="frame" x="19.5" y="10" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-9U-m4F">
+                                                    <rect key="frame" x="141.5" y="16.5" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="centerX" secondItem="Vvl-8Q-BQH" secondAttribute="centerX" id="5lC-X5-wl6"/>
+                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="centerY" secondItem="Vvl-8Q-BQH" secondAttribute="centerY" id="69t-6x-JU8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="vitaminNameLabel" destination="Syg-9U-m4F" id="sdB-iT-hiH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="leading" secondItem="D5N-vE-Yk7" secondAttribute="leading" constant="8" id="2G3-To-gff"/>
+                            <constraint firstItem="D5N-vE-Yk7" firstAttribute="bottom" secondItem="ZHK-1J-lYf" secondAttribute="bottom" constant="20" id="I19-fJ-O2Q"/>
+                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="top" secondItem="D5N-vE-Yk7" secondAttribute="top" constant="8" id="OxP-vv-ROz"/>
+                            <constraint firstItem="D5N-vE-Yk7" firstAttribute="trailing" secondItem="ZHK-1J-lYf" secondAttribute="trailing" constant="8" id="SwT-88-mk5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D5N-vE-Yk7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vitamins" id="xkJ-WA-aPE"/>
+                    <connections>
+                        <outlet property="exampleCollectionView" destination="ZHK-1J-lYf" id="pf2-Hb-y9P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMa-QH-wMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-199.25037481259372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cnz-hW-5OR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AhO-gy-yWL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="86m-cA-K5F">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oKl-tT-zrn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Qz-w1-4YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="133"/>
+        </scene>
+    </scenes>
+</document>

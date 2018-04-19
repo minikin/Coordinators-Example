@@ -1,0 +1,16 @@
+PODS:
+  - ItemsDataSource (0.1.1)
+
+DEPENDENCIES:
+  - ItemsDataSource
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ItemsDataSource
+
+SPEC CHECKSUMS:
+  ItemsDataSource: e1dfd7434d668f617dd96aee5d561b8044aae188
+
+PODFILE CHECKSUM: aa9f735d6fe07379c5f74a6e723f3f397288e1a8
+
+COCOAPODS: 1.5.0
