@@ -19,33 +19,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9m4-15-DtY" kind="relationship" relationship="rootViewController" id="oKl-tT-zrn"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qz-w1-4YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-686" y="133"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="uhe-tP-Acf">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9m4-15-DtY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Lpi-Pq-5xm"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s04-UI-dTd">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="DxD-OS-jXt" kind="relationship" relationship="viewControllers" id="EIA-tZ-D3f"/>
-                        <segue destination="oSi-D3-SHd" kind="relationship" relationship="viewControllers" id="2s5-fy-XoP"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="39c-ot-ZyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="228" y="132.68365817091455"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="hqp-EQ-q8t">
@@ -55,7 +32,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAr-SW-b8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="968"/>
+            <point key="canvasLocation" x="193" y="253"/>
         </scene>
         <!--HealthyFoodViewController-->
         <scene sceneID="vbn-id-tUG">
@@ -65,7 +42,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lh7-Nf-slT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167.2" y="132.68365817091455"/>
+            <point key="canvasLocation" x="193" y="-120"/>
         </scene>
     </scenes>
 </document>

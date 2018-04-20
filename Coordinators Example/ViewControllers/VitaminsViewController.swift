@@ -11,6 +11,13 @@ import UIKit
 
 final class VitaminsViewController: UIViewController {
 
+  //
+
+  static func makeFromStoryboard() -> VitaminsViewController {
+    let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
+    return storyboard.withId(String(describing: self))
+  }
+
   // MARK: - Injections
 
   public var vitaminsDataSourse = ItemsDataSource(items: [Vitamin](),
@@ -57,4 +64,8 @@ final class VitaminsViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension VitaminsViewController: UICollectionViewDelegate {}
+extension VitaminsViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+  }
+}

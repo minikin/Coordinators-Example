@@ -8,11 +8,23 @@
 
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: HealthyFoodViewControllerDelegate {
 
   let navigationController: UINavigationController
 
   init(navigationController: UINavigationController) {
     self.navigationController = navigationController
+  }
+
+  func start() {
+    let healthFoodVC = HealthyFoodViewController.makeFromStoryboard()
+    healthFoodVC.delegate = self
+    navigationController.pushViewController(healthFoodVC, animated: true)
+  }
+
+  func didSelect(_ food: HealthyFood) {
+    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
+    vitaminsVC.vitamins = food.vitamins
+    navigationController.pushViewController(vitaminsVC, animated: true)
   }
 }

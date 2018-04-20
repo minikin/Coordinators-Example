@@ -9,13 +9,22 @@
 import ItemsDataSource
 import UIKit
 
+protocol HealthyFoodViewControllerDelegate: class {
+  func didSelect(_ food: HealthyFood)
+}
+
 final class HealthyFoodViewController: UIViewController {
+
+  static func makeFromStoryboard() -> HealthyFoodViewController {
+    let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
+    return storyboard.withId(String(describing: self))
+  }
 
   // MARK: - Injections
 
   public var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
-                                                 supplementaryDescriptor: { $0.supplementaryDescriptor! }, // We 100%  sure that we'll have supplementaryView!
-    cellDescriptor: { $0.itemCellDescriptor })
+                                                 supplementaryDescriptor: { $0.supplementaryDescriptor! },
+                                                 cellDescriptor: { $0.itemCellDescriptor })
 
   // MARK: - IBOutlets
 
@@ -30,7 +39,7 @@ final class HealthyFoodViewController: UIViewController {
 
   // MARK: - Instance Properties
 
-  var healthyModel: HealthyFood?
+  weak var delegate: HealthyFoodViewControllerDelegate?
 
   // MARK: - ViewController LifeCycle
 
@@ -54,18 +63,6 @@ final class HealthyFoodViewController: UIViewController {
                                   withHeader: true)
     mainCollectionView.collectionViewLayout = layout
   }
-
-  // MARK: - Navigation
-
-  override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-    if segue.identifier == SegueIdentifier.fromMainToExample {
-      let vc = segue.destination as! VitaminsViewController
-      guard let vitamins = healthyModel?.vitamins else {
-        return
-      }
-      vc.vitamins = vitamins
-    }
-  }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -73,10 +70,9 @@ final class HealthyFoodViewController: UIViewController {
 extension HealthyFoodViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let healthyCell = collectionView.cellForItem(at: indexPath) as! HealthyFoodCell
-    guard let model = healthyCell.healthyModel else {
+    guard let food = healthyCell.healthyModel else {
       return
     }
-    healthyModel = model
-    performSegue(withIdentifier: SegueIdentifier.fromMainToExample, sender: healthyCell)
+    delegate?.didSelect(food)
   }
 }
