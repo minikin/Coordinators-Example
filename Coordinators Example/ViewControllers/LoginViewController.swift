@@ -1,5 +1,5 @@
 //
-//  ModalViewController.swift
+//  TheSecondViewController.swift
 //  Coordinators Example
 //
 //  Created by Sasha Prokhorenko on 19.04.18.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class ModalViewController: UIViewController {
+class LoginViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
-
-  @IBAction func closeDidPress(_ sender: UIButton) {
 
   }
-
 }

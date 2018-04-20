@@ -1,5 +1,5 @@
 //
-//  TheSecondViewController.swift
+//  ModalViewController.swift
 //  Coordinators Example
 //
 //  Created by Sasha Prokhorenko on 19.04.18.
@@ -8,10 +8,14 @@
 
 import UIKit
 
-class TheSecondViewController: UIViewController {
+class VitaminDetailsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+
+  @IBAction func closeDidPress(_ sender: UIButton) {
 
   }
+
 }

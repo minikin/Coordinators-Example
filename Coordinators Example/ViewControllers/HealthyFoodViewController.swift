@@ -9,7 +9,7 @@
 import ItemsDataSource
 import UIKit
 
-final class MainViewController: UIViewController {
+final class HealthyFoodViewController: UIViewController {
 
   // MARK: - Injections
 
@@ -70,7 +70,7 @@ final class MainViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension MainViewController: UICollectionViewDelegate {
+extension HealthyFoodViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let healthyCell = collectionView.cellForItem(at: indexPath) as! HealthyFoodCell
     guard let model = healthyCell.healthyModel else {

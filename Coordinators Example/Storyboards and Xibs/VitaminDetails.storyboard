@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="07A-bc-MnO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vitamin Details View Controller-->
+        <scene sceneID="x8V-Ak-h3M">
+            <objects>
+                <viewController storyboardIdentifier="VitaminDetailsViewController" id="07A-bc-MnO" customClass="VitaminDetailsViewController" customModule="Coordinators_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQw-TL-791">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDy-Vm-n0i">
+                                <rect key="frame" x="104" y="296.5" width="167" height="74"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="52"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeDidPress:" destination="07A-bc-MnO" eventType="touchUpInside" id="KTq-VI-Q2e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PDy-Vm-n0i" firstAttribute="centerX" secondItem="fQw-TL-791" secondAttribute="centerX" id="6cT-0Z-kks"/>
+                            <constraint firstItem="PDy-Vm-n0i" firstAttribute="centerY" secondItem="fQw-TL-791" secondAttribute="centerY" id="i9r-2R-fM3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ead-wa-ZsF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wby-u3-3wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="967"/>
+        </scene>
+    </scenes>
+</document>
