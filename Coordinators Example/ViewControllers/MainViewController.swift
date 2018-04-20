@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  iOS Example
+//  Coordinators Example
 //
 //  Created by Sasha Prokhorenko on 18.12.17.
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
@@ -59,7 +59,7 @@ final class MainViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
     if segue.identifier == SegueIdentifier.fromMainToExample {
-      let vc = segue.destination as! ExampleViewController
+      let vc = segue.destination as! VitaminsViewController
       guard let vitamins = healthyModel?.vitamins else {
         return
       }

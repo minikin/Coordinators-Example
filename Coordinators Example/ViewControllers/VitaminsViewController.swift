@@ -1,6 +1,6 @@
 //
 //  ExampleViewController.swift
-//  iOS Example
+//  Coordinators Example
 //
 //  Created by Sasha Prokhorenko on 18.12.17.
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
@@ -9,7 +9,7 @@
 import ItemsDataSource
 import UIKit
 
-final class ExampleViewController: UIViewController {
+final class VitaminsViewController: UIViewController {
 
   // MARK: - Injections
 
@@ -57,4 +57,4 @@ final class ExampleViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension ExampleViewController: UICollectionViewDelegate {}
+extension VitaminsViewController: UICollectionViewDelegate {}
