@@ -24,25 +24,5 @@
             </objects>
             <point key="canvasLocation" x="-686" y="133"/>
         </scene>
-        <!--LoginViewController-->
-        <scene sceneID="hqp-EQ-q8t">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TheSecondViewController" storyboardName="Login" referencedIdentifier="LoginViewController" id="oSi-D3-SHd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7us-Mp-5nk"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IAr-SW-b8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="193" y="253"/>
-        </scene>
-        <!--HealthyFoodViewController-->
-        <scene sceneID="vbn-id-tUG">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="HealthyFoodViewController" storyboardName="HealthyFood" referencedIdentifier="HealthyFoodViewController" id="DxD-OS-jXt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="56u-Rs-47y"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lh7-Nf-slT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="193" y="-120"/>
-        </scene>
     </scenes>
 </document>

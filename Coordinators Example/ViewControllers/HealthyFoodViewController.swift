@@ -15,6 +15,8 @@ protocol HealthyFoodViewControllerDelegate: class {
 
 final class HealthyFoodViewController: UIViewController {
 
+  // MARK: - Class methods
+
   static func makeFromStoryboard() -> HealthyFoodViewController {
     let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
     return storyboard.withId(String(describing: self))

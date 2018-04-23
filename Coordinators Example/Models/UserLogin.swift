@@ -9,3 +9,14 @@
 enum UserLogin {
   case logined, none
 }
+
+//extension UserLogin {
+//  func checkUserStatus() {
+//    switch self {
+//    case .logined:
+//
+//    default:
+//
+//    }
+//  }
+//}

@@ -84,13 +84,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="N9g-yV-pBr"/>
                     <navigationItem key="navigationItem" title="Healthy Food" largeTitleDisplayMode="always" id="Giz-7X-dhn"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="iAZ-ba-RtK" id="92Z-lG-vtP"/>
-                        <segue destination="T0o-s1-0BS" kind="show" identifier="toExample" id="SqV-1h-Tzj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHK-1J-lYf">
-                                <rect key="frame" x="8" y="72" width="359" height="526"/>
+                                <rect key="frame" x="8" y="28" width="359" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B0v-Wc-tU6">
                                     <size key="itemSize" width="320" height="50"/>

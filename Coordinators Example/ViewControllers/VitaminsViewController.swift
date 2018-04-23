@@ -11,7 +11,7 @@ import UIKit
 
 final class VitaminsViewController: UIViewController {
 
-  //
+  // MARK: - Static methods
 
   static func makeFromStoryboard() -> VitaminsViewController {
     let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
@@ -42,7 +42,7 @@ final class VitaminsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("vitamins", vitamins)
+    // Do nothing for now
   }
 
   // MARK: - Helpers
@@ -66,6 +66,6 @@ final class VitaminsViewController: UIViewController {
 
 extension VitaminsViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+    // Do nothing for now
   }
 }

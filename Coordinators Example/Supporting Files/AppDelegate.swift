@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = nav
 
     coordinator = AppCoordinator(navigationController: nav)
-    coordinator?.start()
+    coordinator?.checkUserStatus()
 
     window?.makeKeyAndVisible()
 

@@ -23,13 +23,13 @@ extension UIView {
 
     addSubview(subview)
     subview.translatesAutoresizingMaskIntoConstraints = false
-
+    
     NSLayoutConstraint.activate([
       subview.topAnchor.constraint(equalTo: guide.topAnchor),
       subview.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
       subview.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       subview.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
-    ])
+      ])
   }
 
   /// Insert UI data from  a specified nib as a subview.
@@ -39,7 +39,6 @@ extension UIView {
   ///   - bundle: bundle where the nib is located, defaults to main bundle
   ///   - guide: view or layout guide to aling the new subview, defaults to view itself
   func embedView(ofNibNamed nibName: String, bundle maybeBundle: Bundle? = nil, aligningTo maybeGuide: EmbeddingGuide? = nil) {
-
     let bundle = maybeBundle ?? .main
     let guide = maybeGuide ?? self
     let nib = UINib(nibName: nibName, bundle: bundle)
