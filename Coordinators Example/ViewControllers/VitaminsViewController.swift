@@ -9,12 +9,16 @@
 import ItemsDataSource
 import UIKit
 
+protocol VitaminsViewControllerDelegate: class {
+  func didSelect(_ type: Vitamin)
+}
+
 final class VitaminsViewController: UIViewController {
 
   // MARK: - Static methods
 
   static func makeFromStoryboard() -> VitaminsViewController {
-    let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
+    let storyboard = UIStoryboard(name: "Vitamins", bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 
@@ -37,6 +41,7 @@ final class VitaminsViewController: UIViewController {
   // MARK: - Instance Properties
 
   var vitamins = [Vitamin]()
+  weak var delegate: VitaminsViewControllerDelegate?
 
   // MARK: - ViewController LifeCycle
 
@@ -66,6 +71,11 @@ final class VitaminsViewController: UIViewController {
 
 extension VitaminsViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    // Do nothing for now
+    let vitaminCell = collectionView.cellForItem(at: indexPath) as! ViataminCell
+    guard let vitamin = vitaminCell.vitamim else {
+      return
+    }
+    print("didSelectItemAt", vitamin)
+    delegate?.didSelect(vitamin)
   }
 }

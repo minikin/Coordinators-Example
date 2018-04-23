@@ -17,5 +17,4 @@ class VitaminDetailsViewController: UIViewController {
   @IBAction func closeDidPress(_ sender: UIButton) {
 
   }
-
 }

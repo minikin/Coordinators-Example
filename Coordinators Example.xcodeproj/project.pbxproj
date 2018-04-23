@@ -26,6 +26,7 @@
 		FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E51FE7C733002AB969 /* Assets.xcassets */; };
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
 		FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */; };
+		FCD51744208DF8550037227A /* Vitamins.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD51743208DF8550037227A /* Vitamins.storyboard */; };
 		FCDA08F81FFE737F00FB2F9C /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */; };
 		FCEC915B2088EB84009E8253 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC915A2088EB84009E8253 /* LoginViewController.swift */; };
 		FCEC915D2088EBEF009E8253 /* VitaminDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC915C2088EBEF009E8253 /* VitaminDetailsViewController.swift */; };
@@ -77,6 +78,7 @@
 		FC7484E81FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7484EA1FE7C733002AB969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		FCD51743208DF8550037227A /* Vitamins.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vitamins.storyboard; sourceTree = "<group>"; };
 		FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		FCEC915A2088EB84009E8253 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FCEC915C2088EBEF009E8253 /* VitaminDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDetailsViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */,
 				FCF7DF1A208A06C100C713B3 /* HealthyFood.storyboard */,
+				FCD51743208DF8550037227A /* Vitamins.storyboard */,
 				FCF7DF18208A063E00C713B3 /* Login.storyboard */,
 				FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */,
 				FC7484E21FE7C733002AB969 /* Main.storyboard */,
@@ -338,6 +341,7 @@
 				FCF7DF16208A057C00C713B3 /* Start.storyboard in Resources */,
 				FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */,
 				FCF7DF19208A063E00C713B3 /* Login.storyboard in Resources */,
+				FCD51744208DF8550037227A /* Vitamins.storyboard in Resources */,
 				FC7484E41FE7C733002AB969 /* Main.storyboard in Resources */,
 				FCF7DF1D208A075600C713B3 /* VitaminDetails.storyboard in Resources */,
 			);

@@ -19,6 +19,7 @@ struct Vitamin {
 extension Vitamin {
   func configureIngredientCell(_ cell: ViataminCell) {
     cell.vitaminNameLabel.text = name
+    cell.vitamim = self
     cell.backgroundColor = UIColor.randomColor()
   }
 }

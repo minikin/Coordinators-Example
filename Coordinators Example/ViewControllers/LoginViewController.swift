@@ -52,7 +52,7 @@ final class LoginViewController: UIViewController {
   private func logInUser(complition: @escaping () -> Void) {
     activityIndicator.isHidden = false
     activityIndicator.startAnimating()
-    infoLabel.text = "...."
+    infoLabel.text = "Connecting to server..."
     delayWithSeconds(3.0) {
       self.defaults.set(true, forKey: "UserLoggedIn")
       complition()

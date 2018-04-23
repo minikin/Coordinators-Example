@@ -9,5 +9,12 @@
 import UIKit
 
 final class ViataminCell: UICollectionViewCell {
-    @IBOutlet var vitaminNameLabel: UILabel!
+
+  // MARK: - IBOutlets
+
+  @IBOutlet var vitaminNameLabel: UILabel!
+
+  // MARK: - Instance Properties
+
+  var vitamim: Vitamin?
 }

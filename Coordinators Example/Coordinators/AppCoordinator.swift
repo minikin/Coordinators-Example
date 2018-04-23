@@ -16,7 +16,9 @@ final class AppCoordinator {
   let tabBarController: UITabBarController?
 
   lazy var loginVC: LoginViewController = { [weak self] in
-    LoginViewController.makeFromStoryboard()
+    let loginVC = LoginViewController.makeFromStoryboard()
+    loginVC.delegate = self
+    return loginVC
   }()
 
   lazy var healthyFoodVC: HealthyFoodViewController = { [weak self] in
@@ -24,6 +26,13 @@ final class AppCoordinator {
     foodVC.delegate = self
     return foodVC
   }()
+
+//  lazy var vitaminsVC: VitaminsViewController = { [weak self] in
+//    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
+//    vitaminsVC.delegate = self
+//    return vitaminsVC
+//  }()
+
 
   // MARK: - Initialisation
 
@@ -45,7 +54,6 @@ final class AppCoordinator {
   }
 
   private func showLogin() {
-    loginVC.delegate = self
     navigationController.pushViewController(loginVC, animated: true)
   }
 
@@ -55,6 +63,11 @@ final class AppCoordinator {
 
   private func showFruits() {
     navigationController.pushViewController(healthyFoodVC, animated: true)
+  }
+
+  private func vitamins() {
+    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
+    vitaminsVC.delegate = self
   }
 }
 
@@ -74,5 +87,13 @@ extension AppCoordinator: LoginViewControllerDelegate {
   func userLoggedIn() {
     hideLogin()
     showFruits()
+  }
+}
+
+// MARK: - VitaminsViewControllerDelegate
+
+extension AppCoordinator: VitaminsViewControllerDelegate {
+  func didSelect(_ type: Vitamin) {
+    print("vitamin didSelect:", type)
   }
 }
