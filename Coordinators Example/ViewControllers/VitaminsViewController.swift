@@ -10,7 +10,7 @@ import ItemsDataSource
 import UIKit
 
 protocol VitaminsViewControllerDelegate: class {
-  func didSelect(_ type: Vitamin)
+  func didSelect(_ vitamin: Vitamin)
 }
 
 final class VitaminsViewController: UIViewController {
@@ -75,7 +75,6 @@ extension VitaminsViewController: UICollectionViewDelegate {
     guard let vitamin = vitaminCell.vitamim else {
       return
     }
-    print("didSelectItemAt", vitamin)
     delegate?.didSelect(vitamin)
   }
 }

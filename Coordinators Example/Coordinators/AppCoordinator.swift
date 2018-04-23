@@ -27,11 +27,11 @@ final class AppCoordinator {
     return foodVC
   }()
 
-//  lazy var vitaminsVC: VitaminsViewController = { [weak self] in
-//    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
-//    vitaminsVC.delegate = self
-//    return vitaminsVC
-//  }()
+  lazy var vitaminsVC: VitaminsViewController = { [weak self] in
+    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
+    vitaminsVC.delegate = self
+    return vitaminsVC
+  }()
 
 
   // MARK: - Initialisation
@@ -66,8 +66,7 @@ final class AppCoordinator {
   }
 
   private func vitamins() {
-    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
-    vitaminsVC.delegate = self
+
   }
 }
 
@@ -75,7 +74,6 @@ final class AppCoordinator {
 
 extension AppCoordinator: HealthyFoodViewControllerDelegate {
   func didSelect(_ food: HealthyFood) {
-    let vitaminsVC = VitaminsViewController.makeFromStoryboard()
     vitaminsVC.vitamins = food.vitamins
     navigationController.pushViewController(vitaminsVC, animated: true)
   }
@@ -93,7 +91,7 @@ extension AppCoordinator: LoginViewControllerDelegate {
 // MARK: - VitaminsViewControllerDelegate
 
 extension AppCoordinator: VitaminsViewControllerDelegate {
-  func didSelect(_ type: Vitamin) {
-    print("vitamin didSelect:", type)
+  func didSelect(_ vitamin: Vitamin) {
+    print("vitamin:", vitamin)
   }
 }
