@@ -23,7 +23,7 @@ final class LoginViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private var infoLabel: UIButton!
+  @IBOutlet var infoLabel: UILabel!
   @IBOutlet private var pressMeButton: UIButton!
   @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
@@ -43,7 +43,7 @@ final class LoginViewController: UIViewController {
   @IBAction private func pressMeDidPress(_ sender: UIButton) {
     logInUser { [weak self] in
       self?.activityIndicator.stopAnimating()
-      self?.infoLabel.setTitle("You're logged in!\n You will be redirected to Fruits in a few seconds...", for: .normal)
+      self?.infoLabel.text = "You're logged in!\n You will be redirected to Fruits in a few seconds..."
       self?.pressMeButton.isHidden = true
       self?.redirectToFruits()
     }
@@ -52,7 +52,7 @@ final class LoginViewController: UIViewController {
   private func logInUser(complition: @escaping () -> Void) {
     activityIndicator.isHidden = false
     activityIndicator.startAnimating()
-    infoLabel.setTitle("----", for: .normal)
+    infoLabel.text = "...."
     delayWithSeconds(3.0) {
       self.defaults.set(true, forKey: "UserLoggedIn")
       complition()

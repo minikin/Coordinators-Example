@@ -18,17 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-EN-XeV">
-                                <rect key="frame" x="99" y="308.5" width="177" height="50"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
-                                <size key="titleShadowOffset" width="-2" height="2"/>
-                                <state key="normal" title="Please Login">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcW-bG-oAV">
-                                <rect key="frame" x="145" y="370.5" width="85" height="34"/>
+                                <rect key="frame" x="145" y="375.5" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="6Cv-XH-K37"/>
                                     <constraint firstAttribute="width" constant="85" id="xnB-ul-Q6c"/>
@@ -49,15 +40,25 @@
                                 </constraints>
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="036-eP-VKh">
+                                <rect key="frame" x="12" y="314" width="351" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="-2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eJT-Nt-e5I" firstAttribute="top" secondItem="RCn-w4-0Rq" secondAttribute="top" constant="100" id="4S7-aG-S3w"/>
-                            <constraint firstItem="PcW-bG-oAV" firstAttribute="top" secondItem="WLw-EN-XeV" secondAttribute="bottom" constant="12" id="Lfr-Hu-lrl"/>
-                            <constraint firstItem="WLw-EN-XeV" firstAttribute="centerX" secondItem="nFm-k0-pfG" secondAttribute="centerX" id="TGk-yl-RQB"/>
-                            <constraint firstItem="WLw-EN-XeV" firstAttribute="centerY" secondItem="nFm-k0-pfG" secondAttribute="centerY" id="Wah-ys-LMA"/>
+                            <constraint firstItem="036-eP-VKh" firstAttribute="leading" secondItem="RCn-w4-0Rq" secondAttribute="leading" constant="12" id="523-SU-CaV"/>
+                            <constraint firstItem="036-eP-VKh" firstAttribute="centerY" secondItem="nFm-k0-pfG" secondAttribute="centerY" id="7nj-px-nfJ"/>
+                            <constraint firstItem="RCn-w4-0Rq" firstAttribute="trailing" secondItem="036-eP-VKh" secondAttribute="trailing" constant="12" id="TS0-1u-1ok"/>
+                            <constraint firstItem="036-eP-VKh" firstAttribute="centerX" secondItem="nFm-k0-pfG" secondAttribute="centerX" id="XXI-bI-cFC"/>
                             <constraint firstItem="eJT-Nt-e5I" firstAttribute="centerX" secondItem="nFm-k0-pfG" secondAttribute="centerX" id="d9j-HH-Hg9"/>
                             <constraint firstItem="PcW-bG-oAV" firstAttribute="centerX" secondItem="nFm-k0-pfG" secondAttribute="centerX" id="iYo-PH-GEB"/>
+                            <constraint firstItem="PcW-bG-oAV" firstAttribute="top" secondItem="036-eP-VKh" secondAttribute="bottom" constant="22" id="rRY-Vx-k33"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCn-w4-0Rq"/>
                     </view>
@@ -66,7 +67,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="eJT-Nt-e5I" id="Xb1-Q8-RGK"/>
-                        <outlet property="infoLabel" destination="WLw-EN-XeV" id="hbM-Li-9Bm"/>
+                        <outlet property="infoLabel" destination="036-eP-VKh" id="EBr-kC-kML"/>
                         <outlet property="pressMeButton" destination="PcW-bG-oAV" id="bew-3X-fea"/>
                     </connections>
                 </viewController>

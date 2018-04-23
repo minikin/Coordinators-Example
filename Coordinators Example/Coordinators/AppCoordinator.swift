@@ -10,17 +10,29 @@ import UIKit
 
 final class AppCoordinator {
 
+  // MARK: - Instance properties
+
   var navigationController: UINavigationController
   let tabBarController: UITabBarController?
 
   lazy var loginVC: LoginViewController = { [weak self] in
-    return LoginViewController.makeFromStoryboard()
+    LoginViewController.makeFromStoryboard()
   }()
+
+  lazy var healthyFoodVC: HealthyFoodViewController = { [weak self] in
+    let foodVC = HealthyFoodViewController.makeFromStoryboard()
+    foodVC.delegate = self
+    return foodVC
+  }()
+
+  // MARK: - Initialisation
 
   init(navigationController: UINavigationController, tabBarController: UITabBarController? = nil) {
     self.navigationController = navigationController
     self.tabBarController = tabBarController
   }
+
+  // MARK: - Helpers
 
   func checkUserStatus() {
     let defaults = UserDefaults.standard
@@ -42,12 +54,11 @@ final class AppCoordinator {
   }
 
   private func showFruits() {
-    let healthFoodVC = HealthyFoodViewController.makeFromStoryboard()
-    healthFoodVC.delegate = self
-    navigationController.pushViewController(healthFoodVC, animated: true)
+    navigationController.pushViewController(healthyFoodVC, animated: true)
   }
-
 }
+
+// MARK: - HealthyFoodViewControllerDelegate
 
 extension AppCoordinator: HealthyFoodViewControllerDelegate {
   func didSelect(_ food: HealthyFood) {
@@ -56,6 +67,8 @@ extension AppCoordinator: HealthyFoodViewControllerDelegate {
     navigationController.pushViewController(vitaminsVC, animated: true)
   }
 }
+
+// MARK: - LoginViewControllerDelegate
 
 extension AppCoordinator: LoginViewControllerDelegate {
   func userLoggedIn() {
