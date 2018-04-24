@@ -12,27 +12,32 @@ final class AppCoordinator {
 
   // MARK: - Instance properties
 
-  var navigationController: UINavigationController
-  let tabBarController: UITabBarController?
+  weak var navigationController: UINavigationController?
+  weak var tabBarController: UITabBarController?
 
-  lazy var loginVC: LoginViewController = { [weak self] in
+  lazy var loginVC: LoginViewController = { [unowned self] in
     let loginVC = LoginViewController.makeFromStoryboard()
     loginVC.delegate = self
     return loginVC
   }()
 
-  lazy var healthyFoodVC: HealthyFoodViewController = { [weak self] in
+  lazy var healthyFoodVC: HealthyFoodViewController = { [unowned self] in
     let foodVC = HealthyFoodViewController.makeFromStoryboard()
     foodVC.delegate = self
     return foodVC
   }()
 
-  lazy var vitaminsVC: VitaminsViewController = { [weak self] in
+  lazy var vitaminsVC: VitaminsViewController = { [unowned self] in
     let vitaminsVC = VitaminsViewController.makeFromStoryboard()
     vitaminsVC.delegate = self
     return vitaminsVC
   }()
 
+  lazy var vitaminDetails: VitaminDetailsViewController = { [unowned self] in
+    let vitaminDetails = VitaminDetailsViewController.makeFromStoryboard()
+    vitaminDetails.delegate = self
+    return vitaminDetails
+  }()
 
   // MARK: - Initialisation
 
@@ -40,33 +45,40 @@ final class AppCoordinator {
     self.navigationController = navigationController
     self.tabBarController = tabBarController
   }
-
+  
   // MARK: - Helpers
 
   func checkUserStatus() {
     let defaults = UserDefaults.standard
     let userStatus = defaults.bool(forKey: "UserLoggedIn")
     if userStatus {
-      showFruits()
+      showHealthyFood()
     } else {
       showLogin()
     }
   }
 
   private func showLogin() {
-    navigationController.pushViewController(loginVC, animated: true)
+    navigationController?.setViewControllers([loginVC], animated: true)
+    //navigationController?.pushViewController(loginVC, animated: true)
   }
 
   private func hideLogin() {
-    navigationController.viewControllers.removeLast()
+    navigationController?.viewControllers.removeLast()
   }
 
-  private func showFruits() {
-    navigationController.pushViewController(healthyFoodVC, animated: true)
+  private func showHealthyFood() {
+    navigationController?.setViewControllers([healthyFoodVC], animated: true)
+    //navigationController?.pushViewController(healthyFoodVC, animated: true)
   }
 
-  private func vitamins() {
+  private func showVitaminDetails() {
+    navigationController?.modalPresentationStyle = .overFullScreen
+    navigationController?.present(vitaminDetails, animated: true)
+  }
 
+  private func hideVitaminDetails() {
+    vitaminDetails.dismiss(animated: true)
   }
 }
 
@@ -75,7 +87,8 @@ final class AppCoordinator {
 extension AppCoordinator: HealthyFoodViewControllerDelegate {
   func didSelect(_ food: HealthyFood) {
     vitaminsVC.vitamins = food.vitamins
-    navigationController.pushViewController(vitaminsVC, animated: true)
+    navigationController?.setViewControllers([vitaminsVC], animated: true)
+    //navigationController?.pushViewController(vitaminsVC, animated: true)
   }
 }
 
@@ -84,7 +97,7 @@ extension AppCoordinator: HealthyFoodViewControllerDelegate {
 extension AppCoordinator: LoginViewControllerDelegate {
   func userLoggedIn() {
     hideLogin()
-    showFruits()
+    showHealthyFood()
   }
 }
 
@@ -92,6 +105,15 @@ extension AppCoordinator: LoginViewControllerDelegate {
 
 extension AppCoordinator: VitaminsViewControllerDelegate {
   func didSelect(_ vitamin: Vitamin) {
-    print("vitamin:", vitamin)
+    vitaminDetails.vitamin = vitamin
+    showVitaminDetails()
+  }
+}
+
+// MARK: - VitaminDetailsViewControllerDelegate
+
+extension AppCoordinator: VitaminDetailsViewControllerDelegate {
+  func dissmissVitaminDetails() {
+    hideVitaminDetails()
   }
 }

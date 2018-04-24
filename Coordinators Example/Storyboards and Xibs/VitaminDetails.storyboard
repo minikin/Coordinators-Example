@@ -19,7 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDy-Vm-n0i">
-                                <rect key="frame" x="104" y="296.5" width="167" height="74"/>
+                                <rect key="frame" x="104" y="573" width="167" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="Cgp-0b-fDI"/>
+                                    <constraint firstAttribute="height" constant="74" id="K9i-T6-2dc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="52"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="CLOSE">
@@ -30,14 +34,42 @@
                                     <action selector="closeDidPress:" destination="07A-bc-MnO" eventType="touchUpInside" id="KTq-VI-Q2e"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vitamin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-8G-zUG">
+                                <rect key="frame" x="104" y="299" width="167" height="68"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="-4" height="4"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-lo-xEJ">
+                                <rect key="frame" x="110" y="375" width="155" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Scl-s2-sLf"/>
+                                    <constraint firstAttribute="width" constant="155" id="mXm-3J-FbO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.9085356664057983" green="0.85175372562021801" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="-2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PDy-Vm-n0i" firstAttribute="centerX" secondItem="fQw-TL-791" secondAttribute="centerX" id="6cT-0Z-kks"/>
-                            <constraint firstItem="PDy-Vm-n0i" firstAttribute="centerY" secondItem="fQw-TL-791" secondAttribute="centerY" id="i9r-2R-fM3"/>
+                            <constraint firstItem="ead-wa-ZsF" firstAttribute="bottom" secondItem="PDy-Vm-n0i" secondAttribute="bottom" constant="20" id="AWF-Cg-Y1B"/>
+                            <constraint firstItem="eUh-lo-xEJ" firstAttribute="top" secondItem="xcB-8G-zUG" secondAttribute="bottom" constant="8" id="DD9-wa-tkc"/>
+                            <constraint firstItem="xcB-8G-zUG" firstAttribute="centerX" secondItem="fQw-TL-791" secondAttribute="centerX" id="UYs-pI-gZm"/>
+                            <constraint firstItem="eUh-lo-xEJ" firstAttribute="centerX" secondItem="fQw-TL-791" secondAttribute="centerX" id="ZWW-IP-pHA"/>
+                            <constraint firstItem="xcB-8G-zUG" firstAttribute="centerY" secondItem="fQw-TL-791" secondAttribute="centerY" id="fla-xh-LX5"/>
+                            <constraint firstItem="PDy-Vm-n0i" firstAttribute="centerX" secondItem="fQw-TL-791" secondAttribute="centerX" id="uNN-zL-SXG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ead-wa-ZsF"/>
                     </view>
+                    <connections>
+                        <outlet property="vitamiAmountLabel" destination="eUh-lo-xEJ" id="bXs-e1-SJ1"/>
+                        <outlet property="vitaminLabel" destination="xcB-8G-zUG" id="o9G-2f-cHV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wby-u3-3wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

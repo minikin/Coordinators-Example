@@ -30,7 +30,7 @@ final class HealthyFoodViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet var mainCollectionView: UICollectionView! {
+  @IBOutlet weak var mainCollectionView: UICollectionView! {
     didSet {
       setMainCollectionViewDataSource()
       mainCollectionView.delegate = self

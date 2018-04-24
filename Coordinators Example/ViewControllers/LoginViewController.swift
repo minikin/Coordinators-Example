@@ -23,9 +23,9 @@ final class LoginViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet var infoLabel: UILabel!
-  @IBOutlet private var pressMeButton: UIButton!
-  @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var infoLabel: UILabel!
+  @IBOutlet weak private var pressMeButton: UIButton!
+  @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
 
   // MARK: - Insatance Properies
 

@@ -29,7 +29,7 @@ final class VitaminsViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet var exampleCollectionView: UICollectionView! {
+  @IBOutlet weak var exampleCollectionView: UICollectionView! {
     didSet {
       setExampleCollectionViewDataSource()
       exampleCollectionView.delegate = self

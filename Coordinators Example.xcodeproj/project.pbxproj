@@ -34,7 +34,6 @@
 		FCF7DF102089FDE700C713B3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF0F2089FDE700C713B3 /* AppCoordinator.swift */; };
 		FCF7DF12208A003200C713B3 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF11208A003200C713B3 /* UIViewController+Extensions.swift */; };
 		FCF7DF14208A008700C713B3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF13208A008700C713B3 /* UIView+Extensions.swift */; };
-		FCF7DF16208A057C00C713B3 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF15208A057C00C713B3 /* Start.storyboard */; };
 		FCF7DF19208A063E00C713B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF18208A063E00C713B3 /* Login.storyboard */; };
 		FCF7DF1B208A06C100C713B3 /* HealthyFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1A208A06C100C713B3 /* HealthyFood.storyboard */; };
 		FCF7DF1D208A075600C713B3 /* VitaminDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */; };
@@ -86,7 +85,6 @@
 		FCF7DF0F2089FDE700C713B3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FCF7DF11208A003200C713B3 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FCF7DF13208A008700C713B3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		FCF7DF15208A057C00C713B3 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		FCF7DF18208A063E00C713B3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FCF7DF1A208A06C100C713B3 /* HealthyFood.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HealthyFood.storyboard; sourceTree = "<group>"; };
 		FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VitaminDetails.storyboard; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				FCF7DF18208A063E00C713B3 /* Login.storyboard */,
 				FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */,
 				FC7484E21FE7C733002AB969 /* Main.storyboard */,
-				FCF7DF15208A057C00C713B3 /* Start.storyboard */,
 			);
 			path = "Storyboards and Xibs";
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			files = (
 				FCF7DF1B208A06C100C713B3 /* HealthyFood.storyboard in Resources */,
 				FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */,
-				FCF7DF16208A057C00C713B3 /* Start.storyboard in Resources */,
 				FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */,
 				FCF7DF19208A063E00C713B3 /* Login.storyboard in Resources */,
 				FCD51744208DF8550037227A /* Vitamins.storyboard in Resources */,
