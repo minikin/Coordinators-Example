@@ -9,5 +9,5 @@
 import UIKit
 
 final class ExampleHeader: UICollectionReusableView {
-    @IBOutlet var exampleHeaderLabel: UILabel!
+  @IBOutlet var exampleHeaderLabel: UILabel!
 }

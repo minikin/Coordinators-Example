@@ -29,7 +29,7 @@ final class ProductNutritionViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var exampleCollectionView: UICollectionView! {
+  @IBOutlet var exampleCollectionView: UICollectionView! {
     didSet {
       setExampleCollectionViewDataSource()
       exampleCollectionView.delegate = self
@@ -48,7 +48,7 @@ final class ProductNutritionViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = productName
+    navigationItem.title = productName
   }
 
   // MARK: - Helpers

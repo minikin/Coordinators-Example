@@ -33,7 +33,7 @@ extension HealthyFood {
 extension HealthyFood: Itemable {
   var itemCellDescriptor: CellDescriptor {
     return CellDescriptor(reuseIdentifier: ReuseIdentifier.healthyFoodCell,
-                          configure: configureHealthyFoodCell)
+                          configure: self.configureHealthyFoodCell)
   }
 }
 

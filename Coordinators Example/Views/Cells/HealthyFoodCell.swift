@@ -10,11 +10,11 @@ import UIKit
 
 final class HealthyFoodCell: UICollectionViewCell {
 
-    // MARK: - IBOutlets
+  // MARK: - IBOutlets
 
-    @IBOutlet var cellLabel: UILabel!
+  @IBOutlet var cellLabel: UILabel!
 
-    // MARK: - Instance Properties
+  // MARK: - Instance Properties
 
-    var healthyModel: HealthyFood?
+  var healthyModel: HealthyFood?
 }

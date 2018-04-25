@@ -14,7 +14,7 @@ protocol UserLoginCoordinatorDelegate: class {
 
 final class UserLoginCoordinator: RootCoordinator {
 
-   // MARK: - Instance Properties
+  // MARK: - Instance Properties
 
   weak var delegate: UserLoginCoordinatorDelegate?
 
@@ -34,13 +34,12 @@ final class UserLoginCoordinator: RootCoordinator {
     loginVC.delegate = self
     navigationController.viewControllers = [loginVC]
   }
-
 }
 
 // MARK: - LoginViewControllerDelegate
 
 extension UserLoginCoordinator: LoginViewControllerDelegate {
   func userLoggedIn() {
-    delegate?.didLoginSucceeded(self)
+    self.delegate?.didLoginSucceeded(self)
   }
 }

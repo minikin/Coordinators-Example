@@ -23,8 +23,8 @@ final class VitaminDetailsViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private weak var vitaminLabel: UILabel!
-  @IBOutlet private weak var vitamiAmountLabel: UILabel!
+  @IBOutlet private var vitaminLabel: UILabel!
+  @IBOutlet private var vitamiAmountLabel: UILabel!
 
   // MARK: - Instance Properties
 

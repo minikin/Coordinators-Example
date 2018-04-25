@@ -31,7 +31,7 @@ final class FoodListCoordinator: RootCoordinator {
   private func showProduct(_ food: HealthyFood) {
     let productVC = ProductNutritionViewController.makeFromStoryboard()
     productVC.delegate = self
-    productVC.vitamins =  food.vitamins
+    productVC.vitamins = food.vitamins
     productVC.productName = food.name
     self.navigationController.pushViewController(productVC, animated: true)
   }
@@ -49,7 +49,7 @@ final class FoodListCoordinator: RootCoordinator {
 
 extension FoodListCoordinator: FoodListViewControllerDelegate {
   func didSelect(_ food: HealthyFood) {
-    showProduct(food)
+    self.showProduct(food)
   }
 }
 
@@ -57,7 +57,7 @@ extension FoodListCoordinator: FoodListViewControllerDelegate {
 
 extension FoodListCoordinator: ProductNutritionViewControllerDelegate {
   func didSelect(_ vitamin: Vitamin) {
-    presentVitaminDetails(vitamin)
+    self.presentVitaminDetails(vitamin)
   }
 }
 
@@ -68,4 +68,3 @@ extension FoodListCoordinator: VitaminDetailsViewControllerDelegate {
     vitaminDetailsVC.dismiss(animated: true)
   }
 }
-
