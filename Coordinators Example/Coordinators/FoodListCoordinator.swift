@@ -38,6 +38,7 @@ final class FoodListCoordinator: RootCoordinator {
 
   private func presentVitaminDetails(_ vitamin: Vitamin) {
     let vitaminVC = VitaminDetailsViewController.makeFromStoryboard()
+    vitaminVC.delegate = self
     vitaminVC.vitamin = vitamin
     self.navigationController.modalPresentationStyle = .overFullScreen
     navigationController.present(vitaminVC, animated: true)
@@ -59,3 +60,12 @@ extension FoodListCoordinator: ProductNutritionViewControllerDelegate {
     presentVitaminDetails(vitamin)
   }
 }
+
+// MARK: - VitaminDetailsViewControllerDelegate
+
+extension FoodListCoordinator: VitaminDetailsViewControllerDelegate {
+  func dissmissVitaminDetails(_ vitaminDetailsVC: VitaminDetailsViewController) {
+    vitaminDetailsVC.dismiss(animated: true)
+  }
+}
+

@@ -40,7 +40,6 @@
 		FCF7DF19208A063E00C713B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF18208A063E00C713B3 /* Login.storyboard */; };
 		FCF7DF1B208A06C100C713B3 /* FoodList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1A208A06C100C713B3 /* FoodList.storyboard */; };
 		FCF7DF1D208A075600C713B3 /* VitaminDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */; };
-		FCF7DF1F208A1E8B00C713B3 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF1E208A1E8B00C713B3 /* UserLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,7 +93,6 @@
 		FCF7DF18208A063E00C713B3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FCF7DF1A208A06C100C713B3 /* FoodList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodList.storyboard; sourceTree = "<group>"; };
 		FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VitaminDetails.storyboard; sourceTree = "<group>"; };
-		FCF7DF1E208A1E8B00C713B3 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +119,8 @@
 		FC02F0152088E5CA0034E8F8 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				FCCAF54D2090B25A00BE37CC /* Base */,
 				FC471554208F593F0055AD58 /* AppCoordinator.swift */,
-				FC471550208F58B40055AD58 /* Coordinator.swift */,
-				FC471552208F58FD0055AD58 /* RootViewControllerProvider.swift */,
 				FC2BC8C42090974D00CF1866 /* FoodListCoordinator.swift */,
 				FCAF2D9A208F699100D3391F /* UserLoginCoordinator.swift */,
 			);
@@ -156,7 +153,6 @@
 				FC6DA5651FEBBFB70042E8DA /* HealthyFood.swift */,
 				FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */,
 				FC6DA5621FEBBF430042E8DA /* HealthyType.swift */,
-				FCF7DF1E208A1E8B00C713B3 /* UserLogin.swift */,
 				FC6DA5671FEBC0BE0042E8DA /* Vitamin.swift */,
 			);
 			path = Models;
@@ -281,6 +277,15 @@
 			path = "Coordinators Example";
 			sourceTree = "<group>";
 		};
+		FCCAF54D2090B25A00BE37CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC471550208F58B40055AD58 /* Coordinator.swift */,
+				FC471552208F58FD0055AD58 /* RootViewControllerProvider.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,7 +388,6 @@
 				FC2BC8C7209098BA00CF1866 /* StoryboardWithName.swift in Sources */,
 				FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */,
 				FC471553208F58FD0055AD58 /* RootViewControllerProvider.swift in Sources */,
-				FCF7DF1F208A1E8B00C713B3 /* UserLogin.swift in Sources */,
 				FC2BC8C52090974D00CF1866 /* FoodListCoordinator.swift in Sources */,
 				FC1ED1DB1FE7EFE7002E50FD /* ViataminCell.swift in Sources */,
 				FC1ED1C91FE7D76F002E50FD /* FoodListViewController.swift in Sources */,
