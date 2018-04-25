@@ -26,15 +26,15 @@ final class FoodListCoordinator: RootCoordinator {
   func start() {
     let healthyFoodVC = FoodListViewController.makeFromStoryboard()
     healthyFoodVC.delegate = self
-    navigationController.isNavigationBarHidden = false
-    navigationController.viewControllers = [healthyFoodVC]
+    self.navigationController.isNavigationBarHidden = false
+    self.navigationController.viewControllers = [healthyFoodVC]
   }
 
   private func showProduct(_ food: HealthyFood) {
     let productVC = ProductNutritionViewController.makeFromStoryboard()
     productVC.vitamins =  food.vitamins
     productVC.productName = food.name
-    navigationController.pushViewController(productVC, animated: true)
+    self.navigationController.pushViewController(productVC, animated: true)
   }
 
 }
