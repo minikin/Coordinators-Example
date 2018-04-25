@@ -8,20 +8,19 @@
 
 import UIKit
 
-/// The AppCoordinator is our first coordinator
+/// The AppCoordinator is our main coordinator
 /// In this example the AppCoordinator as a rootViewController
 final class AppCoordinator: RootCoordinator {
 
   // MARK: - Properties
 
   private let window: UIWindow
-  private let navigationController: UINavigationController
 
-//  private lazy var navigationController: UINavigationController = {
-//    let navigationController = UINavigationController()
-//    navigationController.isNavigationBarHidden = true
-//    return navigationController
-//  }()
+  private lazy var navigationController: UINavigationController = {
+    let navigationController = UINavigationController()
+    navigationController.isNavigationBarHidden = true
+    return navigationController
+  }()
 
   var childCoordinators: [Coordinator] = []
 
@@ -33,8 +32,6 @@ final class AppCoordinator: RootCoordinator {
 
   init(window: UIWindow) {
     self.window = window
-    navigationController = UINavigationController()
-    navigationController.isNavigationBarHidden = true
     self.window.rootViewController = navigationController
     self.window.makeKeyAndVisible()
   }
