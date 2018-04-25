@@ -9,9 +9,9 @@ import ItemsDataSource
 import UIKit
 
 struct Vitamin {
-  
+
   // MARK: - Instance Properties
-  
+
   let name: String
   let amount: Double
 }
@@ -26,7 +26,7 @@ extension Vitamin {
 
 extension Vitamin: Itemable {
   var itemCellDescriptor: CellDescriptor {
-    return CellDescriptor(reuseIdentifier: ReuseIdentifier.vitaminCell, configure: configureIngredientCell)
+    return CellDescriptor(reuseIdentifier: ReuseIdentifier.vitaminCell, configure: self.configureIngredientCell)
   }
 }
 
@@ -36,7 +36,7 @@ extension Vitamin: Comparable {
   static func < (lhs: Vitamin, rhs: Vitamin) -> Bool {
     return lhs.name == rhs.name
   }
-  
+
   static func == (lhs: Vitamin, rhs: Vitamin) -> Bool {
     return lhs.name == rhs.name
   }

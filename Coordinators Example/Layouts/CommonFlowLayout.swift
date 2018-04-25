@@ -41,7 +41,7 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
     super.prepare()
     setupLayout()
   }
-
+  
   func itemWidth() -> CGFloat {
     return ((collectionView!.frame.width / columns) - (inset + spacing))
   }

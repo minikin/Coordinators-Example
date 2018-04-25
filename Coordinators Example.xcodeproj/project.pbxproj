@@ -35,8 +35,6 @@
 		FCEC915B2088EB84009E8253 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC915A2088EB84009E8253 /* LoginViewController.swift */; };
 		FCEC915D2088EBEF009E8253 /* VitaminDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC915C2088EBEF009E8253 /* VitaminDetailsViewController.swift */; };
 		FCF7DF0E2089F3F500C713B3 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF0D2089F3F500C713B3 /* UIStoryboard+Extensions.swift */; };
-		FCF7DF12208A003200C713B3 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF11208A003200C713B3 /* UIViewController+Extensions.swift */; };
-		FCF7DF14208A008700C713B3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DF13208A008700C713B3 /* UIView+Extensions.swift */; };
 		FCF7DF19208A063E00C713B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF18208A063E00C713B3 /* Login.storyboard */; };
 		FCF7DF1B208A06C100C713B3 /* FoodList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1A208A06C100C713B3 /* FoodList.storyboard */; };
 		FCF7DF1D208A075600C713B3 /* VitaminDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */; };
@@ -88,8 +86,6 @@
 		FCEC915A2088EB84009E8253 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FCEC915C2088EBEF009E8253 /* VitaminDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDetailsViewController.swift; sourceTree = "<group>"; };
 		FCF7DF0D2089F3F500C713B3 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
-		FCF7DF11208A003200C713B3 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		FCF7DF13208A008700C713B3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		FCF7DF18208A063E00C713B3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FCF7DF1A208A06C100C713B3 /* FoodList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodList.storyboard; sourceTree = "<group>"; };
 		FCF7DF1C208A075600C713B3 /* VitaminDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VitaminDetails.storyboard; sourceTree = "<group>"; };
@@ -218,8 +214,6 @@
 			children = (
 				FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */,
 				FCF7DF0D2089F3F500C713B3 /* UIStoryboard+Extensions.swift */,
-				FCF7DF13208A008700C713B3 /* UIView+Extensions.swift */,
-				FCF7DF11208A003200C713B3 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,14 +389,12 @@
 				FC6DA5401FEBA7A50042E8DA /* HealthyGroup.swift in Sources */,
 				FC6DA5681FEBC0BF0042E8DA /* Vitamin.swift in Sources */,
 				FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */,
-				FCF7DF14208A008700C713B3 /* UIView+Extensions.swift in Sources */,
 				FCAF2D9B208F699100D3391F /* UserLoginCoordinator.swift in Sources */,
 				FC1ED1CD1FE7D779002E50FD /* ProductNutritionViewController.swift in Sources */,
 				FCF7DF0E2089F3F500C713B3 /* UIStoryboard+Extensions.swift in Sources */,
 				FC6DA55F1FEBB6BE0042E8DA /* ReuseIdentifier.swift in Sources */,
 				FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */,
 				FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */,
-				FCF7DF12208A003200C713B3 /* UIViewController+Extensions.swift in Sources */,
 				FC471555208F593F0055AD58 /* AppCoordinator.swift in Sources */,
 				FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */,
 				FC471551208F58B40055AD58 /* Coordinator.swift in Sources */,

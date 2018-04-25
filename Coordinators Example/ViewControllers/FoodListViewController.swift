@@ -25,8 +25,8 @@ final class FoodListViewController: UIViewController {
   // MARK: - Injections
 
   private var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
-                                                 supplementaryDescriptor: { $0.supplementaryDescriptor! },
-                                                 cellDescriptor: { $0.itemCellDescriptor })
+                                                  supplementaryDescriptor: { $0.supplementaryDescriptor! },
+                                                  cellDescriptor: { $0.itemCellDescriptor })
 
   // MARK: - IBOutlets
 
