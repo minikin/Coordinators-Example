@@ -65,6 +65,7 @@ final class AppCoordinator: RootCoordinator {
   }
 }
 
+// MARK: - UserLoginCoordinatorDelegate
 
 extension AppCoordinator: UserLoginCoordinatorDelegate {
   func didLoginSucceeded(_ coordinator: UserLoginCoordinator) {

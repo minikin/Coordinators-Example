@@ -45,7 +45,7 @@ final class LoginViewController: UIViewController {
     pressMeButton.isHidden = true
     logInUser { [weak self] in
       self?.activityIndicator.stopAnimating()
-      self?.infoLabel.text = "You're logged in!\n You will be redirected to 🍎Fruits🍌 in a few seconds..."
+      self?.infoLabel.text = "You're logged in!\n You will be redirected to\n 🍎Food list🍌 \n in a few seconds..."
       self?.redirectToFruits()
     }
   }

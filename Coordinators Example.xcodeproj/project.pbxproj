@@ -16,7 +16,6 @@
 		FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */; };
 		FC2BC8C52090974D00CF1866 /* FoodListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BC8C42090974D00CF1866 /* FoodListCoordinator.swift */; };
 		FC2BC8C7209098BA00CF1866 /* StoryboardWithName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BC8C6209098BA00CF1866 /* StoryboardWithName.swift */; };
-		FC2BC8C92090A58F00CF1866 /* ProductNutritionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BC8C82090A58F00CF1866 /* ProductNutritionCoordinator.swift */; };
 		FC426D821FFFB4950094B840 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */; };
 		FC471551208F58B40055AD58 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC471550208F58B40055AD58 /* Coordinator.swift */; };
 		FC471553208F58FD0055AD58 /* RootViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC471552208F58FD0055AD58 /* RootViewControllerProvider.swift */; };
@@ -69,7 +68,6 @@
 		FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
 		FC2BC8C42090974D00CF1866 /* FoodListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListCoordinator.swift; sourceTree = "<group>"; };
 		FC2BC8C6209098BA00CF1866 /* StoryboardWithName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardWithName.swift; sourceTree = "<group>"; };
-		FC2BC8C82090A58F00CF1866 /* ProductNutritionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNutritionCoordinator.swift; sourceTree = "<group>"; };
 		FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FC471550208F58B40055AD58 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC471552208F58FD0055AD58 /* RootViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerProvider.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				FC471552208F58FD0055AD58 /* RootViewControllerProvider.swift */,
 				FC2BC8C42090974D00CF1866 /* FoodListCoordinator.swift */,
 				FCAF2D9A208F699100D3391F /* UserLoginCoordinator.swift */,
-				FC2BC8C82090A58F00CF1866 /* ProductNutritionCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -385,7 +382,6 @@
 				FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */,
 				FC2BC8C7209098BA00CF1866 /* StoryboardWithName.swift in Sources */,
 				FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */,
-				FC2BC8C92090A58F00CF1866 /* ProductNutritionCoordinator.swift in Sources */,
 				FC471553208F58FD0055AD58 /* RootViewControllerProvider.swift in Sources */,
 				FCF7DF1F208A1E8B00C713B3 /* UserLogin.swift in Sources */,
 				FC2BC8C52090974D00CF1866 /* FoodListCoordinator.swift in Sources */,

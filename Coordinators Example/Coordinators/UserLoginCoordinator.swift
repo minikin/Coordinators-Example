@@ -23,8 +23,6 @@ final class UserLoginCoordinator: RootCoordinator {
     return navigationController
   }()
 
-  var childCoordinators: [Coordinator] = []
-
   var rootViewController: UIViewController {
     return self.navigationController
   }

@@ -12,6 +12,14 @@ protocol Coordinator: class {
 }
 
 extension Coordinator {
+  /// ChildCoordinators is an optional 
+  var childCoordinators: [Coordinator] {
+    get {
+      return []
+    } set {
+      // We need to provide an empty one. Nothing to set here.
+    }
+  }
   /// Add a child coordinator to the parent
   public func addChildCoordinator(_ childCoordinator: Coordinator) {
     childCoordinators.append(childCoordinator)

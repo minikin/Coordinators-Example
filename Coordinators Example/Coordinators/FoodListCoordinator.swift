@@ -17,8 +17,6 @@ final class FoodListCoordinator: RootCoordinator {
     return navigationController
   }()
 
-  var childCoordinators: [Coordinator] = []
-
   var rootViewController: UIViewController {
     return self.navigationController
   }
@@ -32,11 +30,18 @@ final class FoodListCoordinator: RootCoordinator {
 
   private func showProduct(_ food: HealthyFood) {
     let productVC = ProductNutritionViewController.makeFromStoryboard()
+    productVC.delegate = self
     productVC.vitamins =  food.vitamins
     productVC.productName = food.name
     self.navigationController.pushViewController(productVC, animated: true)
   }
 
+  private func presentVitaminDetails(_ vitamin: Vitamin) {
+    let vitaminVC = VitaminDetailsViewController.makeFromStoryboard()
+    vitaminVC.vitamin = vitamin
+    self.navigationController.modalPresentationStyle = .overFullScreen
+    navigationController.present(vitaminVC, animated: true)
+  }
 }
 
 // MARK: - VitaminDetailsViewControllerDelegate
@@ -44,5 +49,13 @@ final class FoodListCoordinator: RootCoordinator {
 extension FoodListCoordinator: FoodListViewControllerDelegate {
   func didSelect(_ food: HealthyFood) {
     showProduct(food)
+  }
+}
+
+// MARK: - ProductNutritionViewControllerDelegate
+
+extension FoodListCoordinator: ProductNutritionViewControllerDelegate {
+  func didSelect(_ vitamin: Vitamin) {
+    presentVitaminDetails(vitamin)
   }
 }
