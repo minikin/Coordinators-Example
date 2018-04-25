@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FoodListCoordinatorDelegate: class {
+  // 
+}
+
 final class FoodListCoordinator: RootCoordinator {
 
   // MARK: - Properties
@@ -24,9 +28,17 @@ final class FoodListCoordinator: RootCoordinator {
   }
 
   func start() {
-    let healthyFoodVC = HealthyFoodViewController.makeFromStoryboard()
+    let healthyFoodVC = FoodListViewController.makeFromStoryboard()
     navigationController.isNavigationBarHidden = false
     navigationController.viewControllers = [healthyFoodVC]
   }
 
+}
+
+// MARK: - VitaminDetailsViewControllerDelegate
+
+extension FoodListCoordinator: ProductNutritionViewControllerDelegate {
+  func didSelect(_ vitamin: Vitamin) {
+
+  }
 }

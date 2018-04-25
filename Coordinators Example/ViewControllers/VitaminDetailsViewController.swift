@@ -9,7 +9,7 @@
 import UIKit
 
 protocol VitaminDetailsViewControllerDelegate: class {
-  func dissmissVitaminDetails()
+  func dissmissVitaminDetails(_ vitaminDetailsVC: VitaminDetailsViewController)
 }
 
 final class VitaminDetailsViewController: UIViewController {
@@ -54,6 +54,6 @@ final class VitaminDetailsViewController: UIViewController {
   // MARK: - Actions
 
   @IBAction private func closeDidPress(_ sender: UIButton) {
-    delegate?.dissmissVitaminDetails()
+    delegate?.dissmissVitaminDetails(self)
   }
 }

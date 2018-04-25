@@ -13,7 +13,7 @@
         <!--Vitamins-->
         <scene sceneID="Ccy-jl-ahq">
             <objects>
-                <viewController storyboardIdentifier="VitaminsViewController" id="T0o-s1-0BS" customClass="VitaminsViewController" customModule="Coordinators_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductNutritionViewController" id="T0o-s1-0BS" customClass="ProductNutritionViewController" customModule="Coordinators_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dS4-oG-f2U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

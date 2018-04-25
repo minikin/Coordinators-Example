@@ -9,16 +9,16 @@
 import ItemsDataSource
 import UIKit
 
-protocol HealthyFoodViewControllerDelegate: class {
+protocol FoodListViewControllerDelegate: class {
   func didSelect(_ food: HealthyFood)
 }
 
-final class HealthyFoodViewController: UIViewController {
+final class FoodListViewController: UIViewController {
 
   // MARK: - Class methods
 
-  static func makeFromStoryboard() -> HealthyFoodViewController {
-    let storyboard = UIStoryboard(name: "HealthyFood", bundle: nil)
+  static func makeFromStoryboard() -> FoodListViewController {
+    let storyboard = UIStoryboard(name: "FoodList", bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 
@@ -41,7 +41,7 @@ final class HealthyFoodViewController: UIViewController {
 
   // MARK: - Instance Properties
 
-  weak var delegate: HealthyFoodViewControllerDelegate?
+  weak var delegate: FoodListViewControllerDelegate?
 
   // MARK: - ViewController LifeCycle
 
@@ -69,7 +69,7 @@ final class HealthyFoodViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension HealthyFoodViewController: UICollectionViewDelegate {
+extension FoodListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let healthyCell = collectionView.cellForItem(at: indexPath) as! HealthyFoodCell
     guard let food = healthyCell.healthyModel else {

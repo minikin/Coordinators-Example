@@ -13,7 +13,7 @@
         <!--Healthy Food-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HealthyFoodViewController" id="BYZ-38-t0r" customClass="HealthyFoodViewController" customModule="Coordinators_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodListViewController" id="BYZ-38-t0r" customClass="FoodListViewController" customModule="Coordinators_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeaderLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-Vw-Bpc">
-                                            <rect key="frame" x="20" y="6.5" width="335" height="38.5"/>
+                                            <rect key="frame" x="20" y="6.5" width="560" height="38.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
