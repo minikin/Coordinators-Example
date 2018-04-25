@@ -24,13 +24,13 @@ final class HealthyFoodViewController: UIViewController {
 
   // MARK: - Injections
 
-  public var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
+  private var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
                                                  supplementaryDescriptor: { $0.supplementaryDescriptor! },
                                                  cellDescriptor: { $0.itemCellDescriptor })
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var mainCollectionView: UICollectionView! {
+  @IBOutlet var mainCollectionView: UICollectionView! {
     didSet {
       setMainCollectionViewDataSource()
       mainCollectionView.delegate = self
@@ -51,12 +51,12 @@ final class HealthyFoodViewController: UIViewController {
 
   // MARK: - Helpers
 
-  func setMainCollectionViewDataSource() {
+  private func setMainCollectionViewDataSource() {
     healthyDataSourse.sections = healthyFood
     mainCollectionView.dataSource = healthyDataSourse
   }
 
-  func setMainCollectionViewLayout() {
+  private func setMainCollectionViewLayout() {
     let layout = CommonFlowLayout(columns: 1,
                                   itemHeight: 60,
                                   inset: 0,

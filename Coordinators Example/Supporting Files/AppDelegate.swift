@@ -12,21 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var coordinator: AppCoordinator?
+  private var applicationCoordinator: AppCoordinator?
 
   func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-    window = UIWindow()
-
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-    window?.rootViewController = nav
-
-    coordinator = AppCoordinator(navigationController: nav)
-    coordinator?.checkUserStatus()
-
-    window?.makeKeyAndVisible()
-
+    setUpAppCoordinator()
     return true
+  }
+
+  // MARK: - Helpers
+
+  private func setUpAppCoordinator() {
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    let applicationCoordinator = AppCoordinator(window: window)
+    self.window = window
+    self.applicationCoordinator = applicationCoordinator
+    applicationCoordinator.start()
   }
 }

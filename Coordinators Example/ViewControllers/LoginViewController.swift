@@ -23,28 +23,34 @@ final class LoginViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var infoLabel: UILabel!
-  @IBOutlet weak private var pressMeButton: UIButton!
-  @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet private var infoLabel: UILabel!
+  @IBOutlet private var pressMeButton: UIButton!
+  @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
   // MARK: - Insatance Properies
 
-  let defaults = UserDefaults.standard
+  private let defaults = UserDefaults.standard
   weak var delegate: LoginViewControllerDelegate?
 
   // MARK: - ViewController LifeCycle
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//  }
+//
+//  override func viewDidDisappear(_ animated: Bool) {
+//    super.viewDidDisappear(animated)
+//    self.removeFromParentViewController()
+//  }
 
   // MARK: - Actions
 
   @IBAction private func pressMeDidPress(_ sender: UIButton) {
+    pressMeButton.isEnabled = false
+    pressMeButton.isHidden = true
     logInUser { [weak self] in
       self?.activityIndicator.stopAnimating()
-      self?.infoLabel.text = "You're logged in!\n You will be redirected to Fruits in a few seconds..."
-      self?.pressMeButton.isHidden = true
+      self?.infoLabel.text = "You're logged in!\n You will be redirected to 🍎Fruits🍌 in a few seconds..."
       self?.redirectToFruits()
     }
   }
