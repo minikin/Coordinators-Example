@@ -17,7 +17,7 @@ final class VitaminDetailsViewController: UIViewController {
   // MARK: - Class methods
 
   static func makeFromStoryboard() -> VitaminDetailsViewController {
-    let storyboard = UIStoryboard(name: "VitaminDetails", bundle: nil)
+    let storyboard = UIStoryboard(name: StoryboardWithName.vitaminDetails, bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 

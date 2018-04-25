@@ -18,7 +18,7 @@ final class FoodListViewController: UIViewController {
   // MARK: - Class methods
 
   static func makeFromStoryboard() -> FoodListViewController {
-    let storyboard = UIStoryboard(name: "FoodList", bundle: nil)
+    let storyboard = UIStoryboard(name: StoryboardWithName.foodList, bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 
@@ -47,6 +47,7 @@ final class FoodListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    // nothing
   }
 
   // MARK: - Helpers

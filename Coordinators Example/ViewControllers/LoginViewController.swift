@@ -17,7 +17,7 @@ final class LoginViewController: UIViewController {
   // MARK: - Class methods
 
   static func makeFromStoryboard() -> LoginViewController {
-    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let storyboard = UIStoryboard(name: StoryboardWithName.login, bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 
@@ -34,14 +34,9 @@ final class LoginViewController: UIViewController {
 
   // MARK: - ViewController LifeCycle
 
-//  override func viewDidLoad() {
-//    super.viewDidLoad()
-//  }
-//
-//  override func viewDidDisappear(_ animated: Bool) {
-//    super.viewDidDisappear(animated)
-//    self.removeFromParentViewController()
-//  }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 
   // MARK: - Actions
 

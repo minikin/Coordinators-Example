@@ -18,7 +18,7 @@ final class ProductNutritionViewController: UIViewController {
   // MARK: - Static methods
 
   static func makeFromStoryboard() -> ProductNutritionViewController {
-    let storyboard = UIStoryboard(name: "ProductNutrition", bundle: nil)
+    let storyboard = UIStoryboard(name: StoryboardWithName.productNutrition, bundle: nil)
     return storyboard.withId(String(describing: self))
   }
 
@@ -41,13 +41,14 @@ final class ProductNutritionViewController: UIViewController {
   // MARK: - Instance Properties
 
   var vitamins = [Vitamin]()
+  var productName = ""
   weak var delegate: ProductNutritionViewControllerDelegate?
 
   // MARK: - ViewController LifeCycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do nothing for now
+    self.navigationItem.title = productName
   }
 
   // MARK: - Helpers
